@@ -118,7 +118,7 @@ author:
   avatar           : "/assets/images/avatar.jpg" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio              : "Full Stack Developer" #"I am an **amazing** person."
   location         : "South Korea/Seoul"
-  email            :
+  email            : "y.wonsuk87@gamil.com"
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
