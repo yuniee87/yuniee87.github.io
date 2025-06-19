@@ -117,7 +117,7 @@ author:
   name             : "Ayaan" #"Your Name"
   avatar           : "/assets/images/avatar.jpg" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio              : "Full Stack Developer" #"I am an **amazing** person."
-  location         : "Somewhere"
+  location         : "South Korea/Seoul"
   email            :
   links:
     - label: "Email"
