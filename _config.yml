@@ -17,11 +17,11 @@ minimal_mistakes_skin    : "dark" # "default" # "air", "aqua", "contrast", "dark
 # Site Settings
 locale                   : "en-US"
 rtl                      : # true, false (default) # turns direction of the page into right to left for RTL languages
-title                    : "Site Title"
+title                    : "Ayaan's Daily Life" # "Site Title"
 title_separator          : "-"
-subtitle                 : # site tagline that appears below site title in masthead
-name                     : "Your Name"
-description              : "An amazing website."
+subtitle                 : "Ayaan's IT Tech Note" # site tagline that appears below site title in masthead
+name                     : "Ayaan" # "Your Name"
+description              : "Ayaan's Everything" # "An amazing website."
 url                      : "https://yuniee87.github.io" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
@@ -68,9 +68,9 @@ reCaptcha:
 atom_feed:
   path                   : # blank (default) uses feed.xml
   hide                   : # true, false (default)
-search                   : # true, false (default)
-search_full_content      : # true, false (default)
-search_provider          : # lunr (default), algolia, google
+search                   : true # true, false (default)
+search_full_content      : true # true, false (default)
+search_provider          : "iunr" # lunr (default), algolia, google
 lunr:
   search_within_pages    : # true, false (default)
 algolia:
