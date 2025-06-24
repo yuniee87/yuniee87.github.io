@@ -3,6 +3,8 @@ title: "Japanese"
 layout: archive
 permalink: /japanese/
 author_profile: true
+sidebar:
+    nav: "sidebar-category"
 ---
 
 {% assign posts = site.categories.japanese %}

@@ -3,6 +3,8 @@ title: "English"
 layout: archive
 permalink: /english/
 author_profile: true
+sidebar:
+    nav: "sidebar-category"
 ---
 
 {% assign posts = site.categories.english %}
