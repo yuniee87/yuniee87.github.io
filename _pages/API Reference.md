@@ -1,9 +1,9 @@
 ---
-title: "Database"
+title: "API Reference"
 layout: archive
-permalink: /database/
+permalink: /api-reference/
 author_profile: true
 ---
 
-{% assign posts = site.categories.database %}
+{% assign posts = site.categories.api-reference %}
 {% for post in posts %} {% include archive-single.html type=page.entries_layout %} {% endfor %}

@@ -1,9 +1,9 @@
 ---
-title: "Database"
+title: "Programming"
 layout: archive
-permalink: /database/
+permalink: /programming/
 author_profile: true
 ---
 
-{% assign posts = site.categories.database %}
+{% assign posts = site.categories.programming %}
 {% for post in posts %} {% include archive-single.html type=page.entries_layout %} {% endfor %}
