@@ -10,3 +10,18 @@ main:
   #   url: /collection-archive/
   # - title: "Sitemap"
   #   url: /sitemap/
+sidebar-category:
+  - title: "IT Tech"
+    children:
+      - title: "Database"
+        url: "/database"
+      - title: "API Reference"
+        url:  "/api-reference"
+      - title: "Programming"
+        url:  "/programming"
+  - title: "Language"
+    children:
+      - title: "Japanese"
+        url: "/japanese"
+      - title: "English"
+        url:  "/english"
