@@ -1,8 +1,8 @@
 ---
 title: "Database"
 layout: archive
-permalink: /database
+permalink: /database/
 ---
 
-{% assign posts = site.categories.Database %}
+{% assign posts = site.categories.database %}
 {% for post in posts %} {% include archive-single.html type=page.entries_layout %} {% endfor %}

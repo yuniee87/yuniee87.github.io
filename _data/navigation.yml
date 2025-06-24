@@ -14,19 +14,19 @@ sidebar-category:
   - title: "💻IT Tech"
     children:
       - title: "Database"
-        url: "/database"
+        url: /database/
         category: "database"
       - title: "API Reference"
-        url:  "/api-reference"
+        url:  /api-reference/
         category: "api-reference"
       - title: "Programming"
-        url:  "/programming"
+        url:  /programming/
         category: "programming"
   - title: "Language"
     children:
       - title: "Japanese"
+        url: /japanese/
         category: "Japanese"
-        url: "/japanese"
       - title: "English"
-        url:  "/english"
+        url:  /english/
         category: "english"
