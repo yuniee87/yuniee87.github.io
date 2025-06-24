@@ -114,7 +114,7 @@ analytics:
 # Site Author
 author:
   name             : "Ayaan" # "Your Name"
-  avatar           : "/assets/images/avatar.jpg" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
+  avatar           : "/assets/images/avatar.png" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio              : "I am Full-stack developer"  # "I am an **amazing** person."
   location         : "Seoul, South Korea"
   email            : y.wonsuk87@gmail.com
