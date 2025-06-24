@@ -19,7 +19,7 @@ locale                   : "en-US"
 rtl                      : # true, false (default) # turns direction of the page into right to left for RTL languages
 title                    : "Ayaan's Daily Life" # "Site Title"
 title_separator          : "-"
-subtitle                 : "Ayaan's IT Tech Note" # site tagline that appears below site title in masthead
+subtitle                 : # site tagline that appears below site title in masthead
 name                     : "Ayaan" # "Your Name"
 description              : "Ayaan's Everything" # "An amazing website."
 url                      : "https://yuniee87.github.io" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
