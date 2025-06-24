@@ -11,17 +11,22 @@ main:
   # - title: "Sitemap"
   #   url: /sitemap/
 sidebar-category:
-  - title: "IT Tech"
+  - title: "💻IT Tech"
     children:
       - title: "Database"
         url: "/database"
+        category: "database"
       - title: "API Reference"
         url:  "/api-reference"
+        category: "api-reference"
       - title: "Programming"
         url:  "/programming"
+        category: "programming"
   - title: "Language"
     children:
       - title: "Japanese"
+        category: "Japanese"
         url: "/japanese"
       - title: "English"
         url:  "/english"
+        category: "english"
