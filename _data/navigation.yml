@@ -22,7 +22,7 @@ sidebar-category:
       - title: "Programming"
         url:  /programming/
         category: "programming"
-  - title: "Language"
+  - title: "📝Language"
     children:
       - title: "Japanese"
         url: /japanese/
