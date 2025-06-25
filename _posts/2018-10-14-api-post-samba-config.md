@@ -18,44 +18,34 @@ SAMBA란, 마이크로소프트와 인텔에서 개발한 SMB(Server Message Blo
 
 1. Install samba server through the yum 
 
-<pre>
-<code>
-# yum install samba
-</code>
-</pre>
+`# yum install samba`
+
 
 2. Firewall exception to samba
 
-<pre>
-<code>
+```
 # firewall-cmd --permanent --zone=public --add-service=samba
 # firewall-cmd --reload
-</code>
-</pre>
+```
 
 3. Create samba user
 
-<pre>
-<code>
+```
 # adduser <user name>
 # smbpasswd -a <user name>
 ..
-</code>
-</pre>
+```
 
 4. Selinux exception to samba directory
 
-<pre>
-<code>
+```
 # chcon -t samba_share_t <directory path>
 # setsebool -P samba_export_all_rw on
-</code>
-</pre>
+```
 
 5. samba config
 
-<pre>
-<code>
+```
 # vi /etc/samba/smb.conf
 
 [data]
@@ -76,13 +66,11 @@ guest ok -> 외부사용자 설정
 writable -> 쓰기권한 설정
 
 browsable -> 자동검색 기능 설정
-</code>
-</pre>
+```
 
 6. systemd service config to samba
 
-<pre>
-<code>
+```
 # systemctl restart smb
 
 # systemctl enable smb
@@ -90,5 +78,4 @@ browsable -> 자동검색 기능 설정
 # systemctl restart nmb
 
 # systemctl enable nmb
-</code>
-</pre>
+```
