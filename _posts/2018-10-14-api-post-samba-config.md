@@ -49,7 +49,6 @@ SAMBA란, 마이크로소프트와 인텔에서 개발한 SMB(Server Message Blo
 
 ```
 # vi /etc/samba/smb.conf
-
 [data]
         comment = data
         path = /data1
@@ -58,15 +57,10 @@ SAMBA란, 마이크로소프트와 인텔에서 개발한 SMB(Server Message Blo
         writable = yes
         browsable = yes
 comment -> alias
-
 path -> 공유할 디렉토리 설정
-
 valid users -> samba 공유계정 설정
-
 guest ok -> 외부사용자 설정
-
 writable -> 쓰기권한 설정
-
 browsable -> 자동검색 기능 설정
 ```
 
@@ -74,10 +68,7 @@ browsable -> 자동검색 기능 설정
 
 ```
 # systemctl restart smb
-
 # systemctl enable smb
-
 # systemctl restart nmb
-
 # systemctl enable nmb
 ```
