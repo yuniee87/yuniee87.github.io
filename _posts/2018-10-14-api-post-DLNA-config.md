@@ -6,15 +6,15 @@ categories: [api-reference]
 tags: [api-reference,Linux,Centos]
 ---
 
-##### DLNA(Digital Living Network Alliance) 서버는 디지털 미디어(사진, 음악, 비디오 등)를 네트워크를 통해 다른 DLNA 지원 기기에 공유하고 스트리밍할 수 있도록 해주는 기술
+DLNA(Digital Living Network Alliance) 서버는 디지털 미디어(사진, 음악, 비디오 등)를 네트워크를 통해 다른 DLNA 지원 기기에 공유하고 스트리밍할 수 있도록 해주는 기술
 --- 
 
-> ##### SYSTEM Info
+> ###### SYSTEM Info
 ---
 - CentOS 7
 - DLNA latest
 
-> ##### DLNA Server Install
+> ###### DLNA Server Install
 
 1. DLNA server를 위한 minidlna 설치
 
@@ -31,7 +31,7 @@ tags: [api-reference,Linux,Centos]
 -> minidlna 설치
 ````
 
-> ##### minidlna 설정
+> ###### minidlna 설정
    
 1. minidlna 디렉토리 설정
 ````
