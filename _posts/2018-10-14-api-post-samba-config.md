@@ -22,8 +22,7 @@ SAMBA란, 마이크로소프트와 인텔에서 개발한 SMB(Server Message Blo
 # yum install samba
 ```
 
-
-2. Firewall exception to samba
+1. Firewall exception to samba
 
 ```
 # firewall-cmd --permanent --zone=public --add-service=samba
