@@ -18,7 +18,9 @@ SAMBA란, 마이크로소프트와 인텔에서 개발한 SMB(Server Message Blo
 
 1. Install samba server through the yum 
 
-`# yum install samba`
+```
+# yum install samba
+```
 
 
 2. Firewall exception to samba

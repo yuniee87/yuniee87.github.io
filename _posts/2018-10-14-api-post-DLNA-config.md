@@ -48,7 +48,7 @@ media_dir=A,/var/share/music
 media_dir=P,/var/share/photo
 -> 사진 설정
 ```
-   
+
 2. MiniDLNA 서버 설정
 
 ```
@@ -65,7 +65,7 @@ log_dir=/var/log/minidlna
 ```
 
 3. firewall 방화벽 설정
-   
+
 ```
 firewall-cmd --permanent --add-port=1900/udp --zone=public
 firewall-cmd --permanent --add-port=8200/tcp --zone=public
@@ -74,7 +74,7 @@ firewall-cmd --reload
 ```
 
 4. minidlna 서버 서비스 기동 및 시작 프로그램 등록
-   
+
 ```
 systemctl start minidlna.service
 systemctl enable minidlna.service
