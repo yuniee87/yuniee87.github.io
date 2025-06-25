@@ -21,12 +21,9 @@ DLNA(Digital Living Network Alliance) 서버는 디지털 미디어(사진, 음�
 ```
 # yum install epel-release
 -> 필요 패키지 설치
-
 # rpm -Uvh http://li.nux.ro/download/nux/dextop/el7/x86_64/nux-dextop-release-0-5.el7.nux.noarch.rpm
-
 # rpm --import http://li.nux.ro/download/nux/RPM-GPG-KEY-nux.ro
 -> minidlna 설치를 위한 yum repo 설정
-
 # yum install minidlna
 -> minidlna 설치
 ```
@@ -38,13 +35,10 @@ DLNA(Digital Living Network Alliance) 서버는 디지털 미디어(사진, 음�
 
 ```
 # vi /etc/minidlna.conf 파일 편집(18번째 줄) 
-
 media_dir=V,/var/share/movie
 -> 동영상 설정
-   
 media_dir=A,/var/share/music
 -> 음악 설정
-   
 media_dir=P,/var/share/photo
 -> 사진 설정
 ```
@@ -53,13 +47,10 @@ media_dir=P,/var/share/photo
 
 ```
 # vi /etc/minidlna.conf 파일 편집(27번째 줄)
-   
 friendly_name=CentOS DLNA Server
 -> 서버 이름 설정
-   
 db_dir=/var/cache/minidlna
 -> DB 캐시 폴더 설정
-   
 log_dir=/var/log/minidlna
 -> log 폴더 설정
 ```
