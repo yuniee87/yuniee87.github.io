@@ -8,11 +8,13 @@ tags: [api-reference,Linux,Centos]
 
 SAMBA란, 마이크로소프트와 인텔에서 개발한 SMB(Server Message Block) 네트워크 프로토콜을 이용해 윈도우와 유닉스 계열의 운영체제나 다른 시스템 간의 자원을 공유할 수 있도록 만든 프로그램
 
-> ###### SYSTEM Info
+###### SYSTEM Info
+-------------
 - Samba 4.10
 - CentOS 7
 
-> ###### Samba Install
+###### Samba Install
+-------------
 
 1. Install samba server through the yum 
 

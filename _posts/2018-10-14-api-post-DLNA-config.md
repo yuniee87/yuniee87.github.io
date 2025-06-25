@@ -8,15 +8,17 @@ tags: [api-reference,Linux,Centos]
 
 DLNA(Digital Living Network Alliance) 서버는 디지털 미디어(사진, 음악, 비디오 등)를 네트워크를 통해 다른 DLNA 지원 기기에 공유하고 스트리밍할 수 있도록 해주는 기술
 
-> ###### SYSTEM Info
+###### SYSTEM Info
+-------------
 - CentOS 7
 - DLNA latest
 
-> ###### DLNA Server Install
+###### DLNA Server Install
+-------------
 
 1. DLNA server를 위한 minidlna 설치
 
-````
+```
 # yum install epel-release
 -> 필요 패키지 설치
 
@@ -27,12 +29,13 @@ DLNA(Digital Living Network Alliance) 서버는 디지털 미디어(사진, 음�
 
 # yum install minidlna
 -> minidlna 설치
-````
+```
 
-> ###### minidlna 설정
-   
+###### minidlna 설정
+-------------
+
 1. minidlna 디렉토리 설정
-````
+```
 # vi /etc/minidlna.conf 파일 편집(18번째 줄) 
 
 media_dir=V,/var/share/movie
@@ -43,10 +46,10 @@ media_dir=A,/var/share/music
    
 media_dir=P,/var/share/photo
 -> 사진 설정
-````
+```
    
 2. MiniDLNA 서버 설정
-````
+```
 # vi /etc/minidlna.conf 파일 편집(27번째 줄)
    
 friendly_name=CentOS DLNA Server
@@ -57,20 +60,20 @@ db_dir=/var/cache/minidlna
    
 log_dir=/var/log/minidlna
 -> log 폴더 설정
-````
+```
 
 3. firewall 방화벽 설정
    
-````
+```
 firewall-cmd --permanent --add-port=1900/udp --zone=public
 firewall-cmd --permanent --add-port=8200/tcp --zone=public
 firewall-cmd --reload
 -> firewall 재시작
-````
+```
 
 4. minidlna 서버 서비스 기동 및 시작 프로그램 등록
    
-````
+```
 systemctl start minidlna.service
 systemctl enable minidlna.service
-````
+```
