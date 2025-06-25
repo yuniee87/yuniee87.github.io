@@ -7,10 +7,8 @@ tags: [api-reference,Linux,Centos]
 ---
 
 DLNA(Digital Living Network Alliance) 서버는 디지털 미디어(사진, 음악, 비디오 등)를 네트워크를 통해 다른 DLNA 지원 기기에 공유하고 스트리밍할 수 있도록 해주는 기술
---- 
 
 > ###### SYSTEM Info
----
 - CentOS 7
 - DLNA latest
 
