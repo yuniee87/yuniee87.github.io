@@ -42,6 +42,7 @@ tags: [api-reference,Linux,Centos]
 ```
 
 5. samba config
+
 ```
 # vi /etc/samba/smb.conf
 
@@ -66,6 +67,7 @@ browsable -> 자동검색 기능 설정
 ```
 
 6. systemd service config to samba
+
 ```
 # systemctl restart smb
 
