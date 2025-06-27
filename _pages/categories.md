@@ -2,5 +2,5 @@
 layout: category
 permalink: /categories/
 title: Categories
-nav: true
+author_profile: true
 ---
