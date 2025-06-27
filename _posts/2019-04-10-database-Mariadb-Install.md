@@ -1,5 +1,6 @@
 ---
 title:  "Mariadb Server ON Centos7"
+excerpt: "Mariadb Server 구성하기"
 author_profile: true
 date: 2019-04-10 20:58:00 +0900
 categories: [database]
