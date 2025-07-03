@@ -39,6 +39,6 @@ END
 2. 실행 예제
 
 ```
-CALL DBMS_OUTPUT('Test');
+CALL DBMS_OUTPUT('Test',@o_RESULT);
 ```
 
