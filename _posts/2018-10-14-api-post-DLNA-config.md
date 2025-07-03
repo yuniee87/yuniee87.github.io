@@ -1,5 +1,5 @@
 ---
-title:  "DLNA Server ON Centos7"
+title:  "DLNA Server on Centos7"
 excerpt: "DLNA Server 구성하기"
 author_profile: true
 date: 2018-10-14 19:50:00 +0900

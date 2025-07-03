@@ -1,5 +1,5 @@
 ---
-title:  "Oracle DBMS_OUTPUT ON Mariadb"
+title:  "Oracle DBMS_OUTPUT on Mariadb"
 excerpt: "Mariadb에서 Oracle DBMS_OUTPUT 기능 사용하기"
 author_profile: true
 date: 2019-04-13 12:54:00 +0900
