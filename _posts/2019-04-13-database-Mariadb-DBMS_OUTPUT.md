@@ -30,7 +30,7 @@ BEGIN
     DECLARE EXiT HANDLER FOR SQLEXCEPTION
     BEGIN
         GET DIAGNOSTICS CONDITION 1 @sqlstate = RETURNED_SQLSTATE, @errno = MYSQL_ERRNO, @text = MESSAGE_TEXT;
-        SET o_RESULT = CONCAT("ERROR ", MYSQL_ERRNO, " (", RETURNED_SQLSTATE, "): ", MESSAGE_TEXT);
+        SET o_RESULT = CONCAT("ERROR ", @errno, " (", @sqlstate, "): ", @text);
     END;
     SELECT i_ITEM as 'OUTPUT';
 END
