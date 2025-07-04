@@ -156,30 +156,67 @@ admin = rw
 -> 방화벽 설정 동기화
 ```
 
-2. MiniDLNA 서버 설정
+4. Maven install
 
 ```
-# vi /etc/minidlna.conf 파일 편집(27번째 줄)
-friendly_name=CentOS DLNA Server
--> 서버 이름 설정
-db_dir=/var/cache/minidlna
--> DB 캐시 폴더 설정
-log_dir=/var/log/minidlna
--> log 폴더 설정
+​# wget http://www-us.apache.org/dist/maven/maven-3/3.6.1/binaries/apache-maven-3.6.1-bin.tar.gz
+-> maven 다운로드
+
+# tar xvfz apache-maven-3.6.1-bin.tar.gz
+-> maven 압축 풀기
+
+# vi .bash_profile
+------------ ※ 아래와 같이 설정 ※ --------------------------------
+export M2_HOME=/tomcat/apache-maven-3.6.1
+export PATH=$M2_HOME/bin
+-----------------------------------------------------------------
+-> maven 설정
+
+# . .bash_profile
+-> 변경된 환경변수 반영
+
+#  mvn --version
+-> mvn 버전확인
 ```
 
-3. firewall 방화벽 설정
+5. Jenkins install & Deploy Environment Config
 
 ```
-firewall-cmd --permanent --add-port=1900/udp --zone=public
-firewall-cmd --permanent --add-port=8200/tcp --zone=public
-firewall-cmd --reload
--> firewall 재시작
-```
+# wget http://mirrors.jenkins.io/war/2.173/jenkins.war
+-> jenkins 다운로드
 
-4. minidlna 서버 서비스 기동 및 시작 프로그램 등록
+# mv jenkins.war /tomcat/tomcat/webapps/
+-> jenkins 소스 배포
 
+# yum install fontconfig
+-> library 설치
+
+# vi /tomcat/tomcat/bin/catalina.sh
+------------ ※ 아래와 같이 설정 ※ --------------------------------
+JAVA_OPTS="-Djava.awt.headless=true"
+-----------------------------------------------------------------
+-> tomcat 설정 추가 ( JFreeChart를 unix상에서 사용할 경우 )
+
+# $CATALINA_HOME/bin/shutdown.sh
+# $CATALINA_HOME/bin/startup.sh
+-> Tomcat 재기동
+
+# vi /root/.jenkins/secrets/initialAdminPassword
 ```
-systemctl start minidlna.service
-systemctl enable minidlna.service
-```
+<img align="left" src="/assets/images/jenkins_first_password.png">
+-> 초기 패스워드 확인 및 입력
+
+<img align="left" src="/assets/images/jenkins_first_Proxyconfig.png">
+-> Conigure proxy ( proxy 구성하여 plug-in 설치 / plug-in 설치 스킵하고 진행 )
+
+<img align="left" src="/assets/images/jenkins_first_adminUser_Create.png">
+-> first admin 계정 설정
+
+<img align="left" src="/assets/images/jenkins_first_plugin_setting.png">
+-> 플로그인 설정
+   1. Jenkins 관리 탭 선택
+   2. 플로그인 관리 탭 선택
+   3. 고급 탭 선택
+   4. 업데이트 사이트 > 사이트경로 변경 ( http://updates.jenkins.io/update-center.json )
+   5. Submit 선택
+   6. 지금 확인 클릭
