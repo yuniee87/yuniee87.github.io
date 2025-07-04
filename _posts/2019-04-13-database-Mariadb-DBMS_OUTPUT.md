@@ -17,7 +17,7 @@ DBMS_OUTPUT 패키지는 PL/SQL 블록(BEGIN ~ END)이나 프로시저, 함수 �
 ###### Create Procedure
 -------------
 
-1. 작성 예제
+###### 1. 작성 예제
 
 ```
 DROP PROCEDURE IF EXISTS DBMS_OUTPUT;
@@ -36,7 +36,7 @@ BEGIN
 END
 ```
 
-2. 실행 예제
+###### 2. 실행 예제
 
 ```
 CALL DBMS_OUTPUT('Test',@o_RESULT);

@@ -218,7 +218,7 @@ JAVA_OPTS="-Djava.awt.headless=true"
   <li>Jenkins 관리 탭 선택</li>
   <li>플러그인 관리 탭 선택</li>
   <li>고급 탭 선택</li>
-  <li>업데이트 사이트 경로 변경 (<code>http://updates.jenkins.io/update-center.json</code>)</li>
+  <li>업데이트 사이트 경로 변경 ( http://updates.jenkins.io/update-center.json )</li>
   <li>Submit 선택</li>
   <li>지금 확인 클릭</li>
 </ol>
