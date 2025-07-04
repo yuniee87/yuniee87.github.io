@@ -1,5 +1,5 @@
 ---
-title:  "Apache Maven Tomcat on Centos7"
+title:  "Apache Maven&Tomcat on Centos7"
 excerpt: "Maven과 Tomcat으로 웹 개발 환경 구축"
 author_profile: true
 date: 2019-04-18 16:10:00 +0900
