@@ -2,7 +2,6 @@
 title:  "Apache Maven&Tomcat on Centos7"
 excerpt: "Maven과 Tomcat으로 웹 개발 환경 구축"
 author_profile: true
-classes: full
 date: 2019-04-18 16:10:00 +0900
 categories: [api-reference]
 tags: [api-reference,Centos,tomcat,maven,jdk,jenkins,subversion]
