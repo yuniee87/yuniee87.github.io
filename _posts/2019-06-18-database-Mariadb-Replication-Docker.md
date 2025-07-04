@@ -2,7 +2,6 @@
 title:  "Mariadb Replication Server on Docker"
 excerpt: "Mariadb Replication Server Docker 환경에 구성하기"
 author_profile: true
-classes: wide
 date: 2019-06-18 14:18:00 +0900
 categories: [database]
 tags: [database,mariadb,docker,replication]

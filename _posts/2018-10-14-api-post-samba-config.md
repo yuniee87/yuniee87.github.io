@@ -2,7 +2,6 @@
 title:  "Centos7 samba server 구축"
 excerpt: "Samba Server 구성하기"
 author_profile: true
-classes: wide
 date: 2018-10-14 18:48:00 +0900
 categories: [api-reference]
 tags: [api-reference,Linux,Centos]
