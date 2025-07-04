@@ -171,7 +171,7 @@ MariaDB [(none)]> show slave 'm1' status\G;
 ``` 
 
 <span style="font-size:0.7em; color: red">※ 10.2 이전 버전에서는 replicate_do_db 옵션을 사용할 경우 아래와 같은 제약사항이 발생됨.</span>  
-<span style="font-size:0.7em; color: red"> - create {DB Name}.{Table Name} 등 {DB Name}.xxxx 문장의 statement duplicate가 이루어지지 않음.</span>  
+<span style="font-size:0.7em; color: red">- create {DB Name}.{Table Name} 등 {DB Name}.xxxx 문장의 statement duplicate가 이루어지지 않음.</span>  
 
 ###### 5. Mariadb MSR(multi source replication) Configration
 
