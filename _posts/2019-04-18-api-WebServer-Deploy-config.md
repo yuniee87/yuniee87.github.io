@@ -69,7 +69,7 @@ export CLASSPATH=$JAVA_HOME/jre/lib/ext:$JAVA_HOME/lib/tools.jar:$CATALINA_HOME/
 -> 방화벽 설정 동기화
 ```
 <img align="left" src="/assets/images/Tomcat.png">
-<span style="font-size:0.9em">< 테스트 페이지 ></span>
+<span style="font-size:0.7em">< 테스트 페이지 ></span>
 
 ###### 3. Subversion install
 
@@ -204,17 +204,17 @@ JAVA_OPTS="-Djava.awt.headless=true"
 # vi /root/.jenkins/secrets/initialAdminPassword
 ```
 <img align="left" src="/assets/images/jenkins_first_password.png">
-<span style="font-size:0.9em">-> 초기 패스워드 확인 및 입력</span>
+<span style="font-size:0.7em">-> 초기 패스워드 확인 및 입력</span>
 
 <img align="left" src="/assets/images/jenkins_first_Proxyconfig.png">
-<span style="font-size:0.9em">-> Conigure proxy ( proxy 구성하여 plug-in 설치 / plug-in 설치 스킵하고 진행 )</span>
+<span style="font-size:0.7em">-> Conigure proxy ( proxy 구성하여 plug-in 설치 / plug-in 설치 스킵하고 진행 )</span>
 
 <img align="left" src="/assets/images/jenkins_first_adminUser_Create.png">
-<span style="font-size:0.9em">-> first admin 계정 설정</span>
+<span style="font-size:0.7em">-> first admin 계정 설정</span>
 
 <img align="left" src="/assets/images/jenkins_first_plugin_setting.png">
-<p style="font-size: 0.9em;"><strong>→ 플러그인 설정</strong></p>
-<ol style="font-size: 0.9em;">
+<p style="font-size:0.7em;"><strong>→ 플러그인 설정</strong></p>
+<ol style="font-size:0.7em;">
   <li>Jenkins 관리 탭 선택</li>
   <li>플러그인 관리 탭 선택</li>
   <li>고급 탭 선택</li>
