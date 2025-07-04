@@ -5,6 +5,7 @@ author_profile: true
 date: 2019-04-10 20:58:00 +0900
 categories: [database]
 tags: [database,mariadb,Centos]
+comments: true
 ---
 
 ###### SYSTEM Info

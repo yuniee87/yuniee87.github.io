@@ -5,6 +5,7 @@ author_profile: true
 date: 2018-10-14 19:50:00 +0900
 categories: [api-reference]
 tags: [api-reference,Linux,Centos]
+comments: true
 ---
 
 DLNA(Digital Living Network Alliance) 서버는 디지털 미디어(사진, 음악, 비디오 등)를 네트워크를 통해 다른 DLNA 지원 기기에 공유하고 스트리밍할 수 있도록 해주는 기술

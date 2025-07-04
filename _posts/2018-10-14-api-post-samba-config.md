@@ -5,6 +5,7 @@ author_profile: true
 date: 2018-10-14 18:48:00 +0900
 categories: [api-reference]
 tags: [api-reference,Linux,Centos]
+comments: true
 ---
 
 SAMBA란, 마이크로소프트와 인텔에서 개발한 SMB(Server Message Block) 네트워크 프로토콜을 이용해 윈도우와 유닉스 계열의 운영체제나 다른 시스템 간의 자원을 공유할 수 있도록 만든 프로그램

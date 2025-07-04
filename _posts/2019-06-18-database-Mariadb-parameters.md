@@ -6,6 +6,7 @@ classes: custom-font
 date: 2019-06-18 14:18:00 +0900
 categories: [database]
 tags: [database,mariadb]
+comments: true
 ---
 
 ##### Mariadb Parameters  

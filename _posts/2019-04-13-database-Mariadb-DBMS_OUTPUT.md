@@ -5,6 +5,7 @@ author_profile: true
 date: 2019-04-13 12:54:00 +0900
 categories: [database]
 tags: [database,mariadb,oracle]
+comments: true
 ---
 
 DBMS_OUTPUT 패키지는 PL/SQL 블록(BEGIN ~ END)이나 프로시저, 함수 등 SUB PROGRAM 및 패키지, 트리거등에서 메시지를 출력할 수 있는 기능을 제공하는데 메시지를 버퍼에 저장하고 버퍼에서 읽어오기 위한 기능을 제공하는 오라클 패키지 입니다.

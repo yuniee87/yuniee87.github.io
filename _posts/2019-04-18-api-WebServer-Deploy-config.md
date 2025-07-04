@@ -5,6 +5,7 @@ author_profile: true
 date: 2019-04-18 16:10:00 +0900
 categories: [api-reference]
 tags: [api-reference,Centos,tomcat,maven,jdk,jenkins,subversion]
+comments: true
 ---
 
 jenkins로 개발 배포 Workload 관리
