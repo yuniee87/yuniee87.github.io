@@ -22,7 +22,7 @@ Tomcat과 Maven을 통한 웹 서버 개발 배포 및 Subversion으로 개발 �
 ###### Environment Configuration
 -------------
 
-1. openjdk-1.8.0 install
+###### 1. openjdk-1.8.0 install
 
 ```
 # wget http://anduin.linuxfromscratch.org/BLFS/OpenJDK/OpenJDK-1.8.0.141/OpenJDK-1.8.0.141-x86_64-bin.tar.xz
@@ -35,7 +35,7 @@ Tomcat과 Maven을 통한 웹 서버 개발 배포 및 Subversion으로 개발 �
 -> 링크 설정
 ```
 
-2. Tomcat install
+###### 2. Tomcat install
 
 ```
 # wget http://mirror.navercorp.com/apache/tomcat/tomcat-9/v9.0.17/bin/apache-tomcat-9.0.17.tar.gz
@@ -71,7 +71,7 @@ export CLASSPATH=$JAVA_HOME/jre/lib/ext:$JAVA_HOME/lib/tools.jar:$CATALINA_HOME/
 <img align="left" src="/assets/images/Tomcat.png">
 <span style="font-size:0.9em">< 테스트 페이지 ></span>
 
-3. Subversion install
+###### 3. Subversion install
 
 ```
 # vi /etc/yum.repos.d/subversion.repo
@@ -156,7 +156,7 @@ admin = rw
 -> 방화벽 설정 동기화
 ```
 
-4. Maven install
+###### 4. Maven install
 
 ```
 ​# wget http://www-us.apache.org/dist/maven/maven-3/3.6.1/binaries/apache-maven-3.6.1-bin.tar.gz
@@ -179,7 +179,7 @@ export PATH=$M2_HOME/bin
 -> mvn 버전확인
 ```
 
-5. Jenkins install & Deploy Environment Config
+###### 5. Jenkins install & Deploy Environment Config
 
 ```
 # wget http://mirrors.jenkins.io/war/2.173/jenkins.war
@@ -213,10 +213,12 @@ JAVA_OPTS="-Djava.awt.headless=true"
 <span style="font-size:0.9em">-> first admin 계정 설정</span>
 
 <img align="left" src="/assets/images/jenkins_first_plugin_setting.png">
-<span style="font-size:0.9em"><strong>-> 플로그인 설정</strong></span>  
-   1. <span style="font-size:0.9em">Jenkins 관리 탭 선택</span>  
-   2. <span style="font-size:0.9em"> 플로그인 관리 탭 선택</span>  
-   3. <span style="font-size:0.9em">고급 탭 선택</span>  
-   4. <span style="font-size:0.9em">업데이트 사이트 > 사이트경로 변경 ( http://updates.jenkins.io/update-center.json )</span>  
-   5. <span style="font-size:0.9em">Submit 선택</span>  
-   6. <span style="font-size:0.9em">지금 확인 클릭</span>  
+<p style="font-size: 0.9em;"><strong>→ 플러그인 설정</strong></p>
+<ol style="font-size: 0.9em;">
+  <li>Jenkins 관리 탭 선택</li>
+  <li>플러그인 관리 탭 선택</li>
+  <li>고급 탭 선택</li>
+  <li>업데이트 사이트 경로 변경 (<code>http://updates.jenkins.io/update-center.json</code>)</li>
+  <li>Submit 선택</li>
+  <li>지금 확인 클릭</li>
+</ol>
