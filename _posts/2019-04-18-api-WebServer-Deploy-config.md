@@ -67,7 +67,7 @@ export CLASSPATH=$JAVA_HOME/jre/lib/ext:$JAVA_HOME/lib/tools.jar:$CATALINA_HOME/
 -> 방화벽 설정 동기화
 ```
 < 테스트 페이지 >
-<img align="left" src="Tomcat.png">
+<img align="left" src="/assets/images/Tomcat.png">
 
 
 ###### minidlna 설정
