@@ -536,10 +536,10 @@ show-warnings # 경고 발생시 메세지 자동 출력
 
 [xtrabackup]
 default-character-set = 'utf8'
-# clientlib 5.1로 xtrabackup binary가 build된 경우, 해당 lib에는 utf8mb4가 없어서 아래와 같은 오류가 발생할 수 있음
-# 오류내용: "Can't initialize character set utf8mb4"
-# lib 5.5로 xtrabackup을 다시 컴파일하면 문제가 없지만 workaround로 위와 같은 옵션을 설정해도 됨
-# 위 설정은 특별한 의미는 없으며 lib 5.1에는 utf8이 있기 때문에 오류가 발생하진 않음
+- clientlib 5.1로 xtrabackup binary가 build된 경우, 해당 lib에는 utf8mb4가 없어서 아래와 같은 오류가 발생할 수 있음
+- 오류내용: "Can't initialize character set utf8mb4"
+- lib 5.5로 xtrabackup을 다시 컴파일하면 문제가 없지만 workaround로 위와 같은 옵션을 설정해도 됨
+- 위 설정은 특별한 의미는 없으며 lib 5.1에는 utf8이 있기 때문에 오류가 발생하진 않음
 
 ###### 모든 클라이언트 툴을 이용한 DB 접속시에 적용되는 설정
 
