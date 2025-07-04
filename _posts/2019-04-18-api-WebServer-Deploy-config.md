@@ -69,7 +69,7 @@ export CLASSPATH=$JAVA_HOME/jre/lib/ext:$JAVA_HOME/lib/tools.jar:$CATALINA_HOME/
 -> 방화벽 설정 동기화
 ```
 <img align="left" src="/assets/images/Tomcat.png">
-###### < 테스트 페이지 >
+< 테스트 페이지 >
 
 3. Subversion install
 
