@@ -69,7 +69,7 @@ export CLASSPATH=$JAVA_HOME/jre/lib/ext:$JAVA_HOME/lib/tools.jar:$CATALINA_HOME/
 -> 방화벽 설정 동기화
 ```
 <img align="left" src="/assets/images/Tomcat.png">
-<small>< 테스트 페이지 ></small>
+<span style="font-size:0.9em">< 테스트 페이지 ></span>
 
 3. Subversion install
 
@@ -204,19 +204,19 @@ JAVA_OPTS="-Djava.awt.headless=true"
 # vi /root/.jenkins/secrets/initialAdminPassword
 ```
 <img align="left" src="/assets/images/jenkins_first_password.png">
-<small>-> 초기 패스워드 확인 및 입력</small>
+<span style="font-size:0.9em">-> 초기 패스워드 확인 및 입력</span>
 
 <img align="left" src="/assets/images/jenkins_first_Proxyconfig.png">
-<small>-> Conigure proxy ( proxy 구성하여 plug-in 설치 / plug-in 설치 스킵하고 진행 )</small>
+<span style="font-size:0.9em">-> Conigure proxy ( proxy 구성하여 plug-in 설치 / plug-in 설치 스킵하고 진행 )</span>
 
 <img align="left" src="/assets/images/jenkins_first_adminUser_Create.png">
-<small>-> first admin 계정 설정</small>
+<span style="font-size:0.9em">-> first admin 계정 설정</span>
 
 <img align="left" src="/assets/images/jenkins_first_plugin_setting.png">
-<small><strong>-> 플로그인 설정</strong></small>  
-   1. <small>Jenkins 관리 탭 선택</small>  
-   2. <small> 플로그인 관리 탭 선택</small>  
-   3. <small>고급 탭 선택</small>  
-   4. <small>업데이트 사이트 > 사이트경로 변경 ( http://updates.jenkins.io/update-center.json )</small>  
-   5. <small>Submit 선택</small>  
-   6. <small>지금 확인 클릭</small>  
+<span style="font-size:0.9em"><strong>-> 플로그인 설정</strong></span>  
+   1. <span style="font-size:0.9em">Jenkins 관리 탭 선택</span>  
+   2. <span style="font-size:0.9em"> 플로그인 관리 탭 선택</span>  
+   3. <span style="font-size:0.9em">고급 탭 선택</span>  
+   4. <span style="font-size:0.9em">업데이트 사이트 > 사이트경로 변경 ( http://updates.jenkins.io/update-center.json )</span>  
+   5. <span style="font-size:0.9em">Submit 선택</span>  
+   6. <span style="font-size:0.9em">지금 확인 클릭</span>  
