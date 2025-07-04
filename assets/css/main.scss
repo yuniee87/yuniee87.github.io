@@ -8,20 +8,6 @@ search: false
 @import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
 @import "minimal-mistakes"; // main partials
 
-.page__content,
-.page__inner-wrap {
-  max-width: 100% !important;
-  width: 100%;
-  padding: 2rem;
-}
-
-.highlighter-rouge,
-.highlight,
-pre {
-  max-width: 100% !important;
-  overflow-x: auto;
-}
-
 /* 특정 포스팅용 폰트 크기 조절 */
 .custom-font .page__content {
   font-size: 0.7rem; /* 원하는 크기로 조절 */
