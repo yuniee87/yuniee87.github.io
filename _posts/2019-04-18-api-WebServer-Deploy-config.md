@@ -27,8 +27,10 @@ Tomcat과 Maven을 통한 웹 서버 개발 배포 및 Subversion으로 개발 �
 ```
 # wget http://anduin.linuxfromscratch.org/BLFS/OpenJDK/OpenJDK-1.8.0.141/OpenJDK-1.8.0.141-x86_64-bin.tar.xz
 -> openjdk 다운로드
+
 # tar -xvf jtreg-4.2-b08-891.tar.gz
 -> 압축 해제
+
 # ln -s OpenJDK-1.8.0.141-x86_64-bin java
 -> 링크 설정
 ```
@@ -66,23 +68,92 @@ export CLASSPATH=$JAVA_HOME/jre/lib/ext:$JAVA_HOME/lib/tools.jar:$CATALINA_HOME/
 # firewall-cmd --reload
 -> 방화벽 설정 동기화
 ```
-< 테스트 페이지 >
 <img align="left" src="/assets/images/Tomcat.png">
+###### < 테스트 페이지 >
 
-
-###### minidlna 설정
--------------
-
-1. minidlna 디렉토리 설정
+3. Subversion install
 
 ```
-# vi /etc/minidlna.conf 파일 편집(18번째 줄) 
-media_dir=V,/var/share/movie
--> 동영상 설정
-media_dir=A,/var/share/music
--> 음악 설정
-media_dir=P,/var/share/photo
--> 사진 설정
+# vi /etc/yum.repos.d/subversion.repo
+------------ ※ 아래와 같이 설정 ※ --------------------------------
+[subversion]
+name=subversion
+baseurl=http://opensource.wandisco.com/centos/$releasever/svn-1.11/RPMS/$basearch/
+#baseurl=http://opensource.wandisco.com/centos/7/svn-1.11/RPMS/$basearch/
+enabled=1
+gpgcheck=0
+-----------------------------------------------------------------
+-> subversion repository 설정
+
+# yum install subversion
+-> subversion 설치
+
+# svnadmin create --fs-type fsfs test_project
+-> subversion 저장소 생성
+
+# vi /etc/sysconfig/svnserve
+------------ ※ 아래와 같이 설정 ※ --------------------------------
+OPTIONS="--threads --root /svn"
+-----------------------------------------------------------------
+
+# vi /usr/lib/systemd/system/svnserve.service
+------------ ※ 아래와 같이 설정 ※ --------------------------------
+[Unit]
+Description=Subversion protocol daemon
+After=syslog.target network.target
+
+[Service]
+Type=forking
+EnvironmentFile=/etc/sysconfig/svnserve
+ExecStart=/usr/bin/svnserve --daemon --pid-file=/run/svnserve/svnserve.pid $OPTIONS
+
+[Install]
+WantedBy=multi-user.target
+-----------------------------------------------------------------
+-> subversion 서비스 설정 ( root : /svn 임의 지정 )
+
+# systemctl daemon-reload
+-> systemctl daemon 재시작
+
+# vi /svn/test_project/conf/svnserve.conf
+------------ ※ 아래와 같이 설정 ※ --------------------------------
+anon-access = none
+auth-access = write
+password-db = passwd
+authz-db = authz
+-----------------------------------------------------------------
+-> subversion 설정 변경 ( 비로그인 접속자는 권한 없음, 로그인하면 쓸 수 있음, passwd와 authz 파일을 사용함 )
+
+# vi /svn/test_project/conf/passwd
+------------ ※ 아래와 같이 설정 ※ --------------------------------
+admin = admin2019
+-----------------------------------------------------------------
+-> subversion 계정 생성
+
+# vi /svn/test_project/conf/authz
+------------ ※ 아래와 같이 설정 ※ --------------------------------
+[/]
+admin = rw
+-----------------------------------------------------------------
+-> 계정 권한 추가
+
+# systemctl start svnserve
+
+# svnserve -d -r /svn
+-> svn 서비스시작
+
+---※ svn 서비스 중지 --------
+# kill -9 pid
+# systemctl stop svnserve
+-----------------------------
+
+# ps -ef | grep svnserve
+
+# firewall-cmd --permanent --zone=public --add-port=3690/tcp
+-> 방화벽 default 8080 port 해제
+
+# firewall-cmd --reload
+-> 방화벽 설정 동기화
 ```
 
 2. MiniDLNA 서버 설정
