@@ -5,6 +5,7 @@ author_profile: true
 date: 2019-06-18 14:18:00 +0900
 categories: [database]
 tags: [database,mariadb,docker,replication]
+comments: true
 ---
 
 ###### SYSTEM Info
