@@ -35,7 +35,7 @@ Tomcat과 Maven을 통한 웹 서버 개발 배포 및 Subversion으로 개발 �
 
 2. Tomcat install
 
-<pre> <code> 
+```
 # wget http://mirror.navercorp.com/apache/tomcat/tomcat-9/v9.0.17/bin/apache-tomcat-9.0.17.tar.gz
 -> tomcat 다운로드
 
@@ -65,10 +65,10 @@ export CLASSPATH=$JAVA_HOME/jre/lib/ext:$JAVA_HOME/lib/tools.jar:$CATALINA_HOME/
 
 # firewall-cmd --reload
 -> 방화벽 설정 동기화
-
+```
 < 테스트 페이지 >
 <img align="left" src="Tomcat.png">
-</code> </pre>
+
 
 ###### minidlna 설정
 -------------
