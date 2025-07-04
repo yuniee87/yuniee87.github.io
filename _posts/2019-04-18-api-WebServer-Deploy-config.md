@@ -213,10 +213,10 @@ JAVA_OPTS="-Djava.awt.headless=true"
 <small>-> first admin 계정 설정</small>
 
 <img align="left" src="/assets/images/jenkins_first_plugin_setting.png">
-<small>-> 플로그인 설정</small>
-<small>  1. Jenkins 관리 탭 선택</small>
-<small>  2. 플로그인 관리 탭 선택</small>
-<small>  3. 고급 탭 선택</small>
-<small>  4. 업데이트 사이트 > 사이트경로 변경 ( http://updates.jenkins.io/update-center.json )</small>
-<small>  5. Submit 선택</small>
-<small>  6. 지금 확인 클릭</small>
+<small><strong>-> 플로그인 설정</strong></small>  
+<small>  1. Jenkins 관리 탭 선택</small>  
+<small>  2. 플로그인 관리 탭 선택</small>  
+<small>  3. 고급 탭 선택</small>  
+<small>  4. 업데이트 사이트 > 사이트경로 변경 ( http://updates.jenkins.io/update-center.json )</small>  
+<small>  5. Submit 선택</small>  
+<small>  6. 지금 확인 클릭</small>  
