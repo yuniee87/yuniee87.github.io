@@ -8,10 +8,10 @@ categories: [database]
 tags: [database,mariadb]
 ---
 
-###### Mariadb Parameters  
+##### Mariadb Parameters  
 -------------
 
-###### mysqld 데몬 프로세스 관련 설정들
+##### mysqld 데몬 프로세스 관련 설정들
 
 [mysqld]
 core-file # core dump 파일을 생성하도록 하기 위한 설정
@@ -27,7 +27,7 @@ tmpdir = /data001/mysvc01/tmpdir_MARIASVC # 디스크에 임시테이블이 생�
 
 secure_file_priv = /tmp # LOAD_FILE() 함수 및 LOAD DATA 와 SELECT ... INTO OUTFILE 명령문이 특정 디렉토리에 있는 파일에서만 동작을 하도록 한정
 
-###### Logging
+##### Logging
 
 log-warnings = 3 # 0 비활성화
 1 이상: 쿼리문 단위의 경고 내용까지 에러로그에 기록
@@ -45,7 +45,7 @@ log-slow-verbosity = 'query_plan,innodb'
 log_queries_not_using_indexes = OFF # 인덱스를 사용하지 않은 쿼리 기록 여부
 slow_query_log_file = /logs001/mysvc01/MARIASVC/slow/mysvc01-slow.log # 느린 쿼리 로그파일 경로
 
-###### DB 기본 설정
+##### DB 기본 설정
 
 skip-name-resolve # 역DNS 검색 비활성화 (IP 기반으로 접속을 하게 되면 hostname lookup 과정 생략)
 
@@ -70,7 +70,7 @@ performance_schema = ON # performance_schema 활성화
 performance_schema_max_digest_length=10240 # digest의 최대 길이 (digest:정형화시킨 쿼리문, 상수부분 등을 패턴화시킨다.)
 plugin-load = server_audit
 
-###### Character Set
+##### Character Set
 
 skip-character-set-client-handshake # 클라이언트에서 보내지는 문자셋 정보를 무시하고 서버의 문자셋 사용
 character_set_server = utf8mb4
@@ -78,7 +78,7 @@ collation_server = utf8mb4_bin
 init_connect='SET collation_connection = utf8mb4_bin'
 init_connect='SET NAMES utf8mb4'
 
-###### Transaction 설정
+##### Transaction 설정
 
 autocommit = ON # autocommit 활성화 여부
 transaction_isolation = "READ-COMMITTED" # replication을 할 때는 "레코드 기반 복제"를 사용하도록 함
@@ -98,13 +98,13 @@ Select 시 현재 데이터 버전의 Snapshot을 만들고, 그 Snapshot으로�
 가장 높은 Isolation Level로 트랜잭션이 완료될 때까지 SELECT 문장이 사용하는 모든 데이터에 Shared Lock이 걸림
 다른 트랜잭션에서는 해당 영역에 관한 데이터 변경 뿐만 아니라 입력도 불가
 
-###### 보안 설정
+##### 보안 설정
 
 skip-external-locking # 외부(TCP/IP) 잠금 비활성화
 enable-secure-auth # 서버로 구버전(4.1버전 이하) 포멧으로 된 패스워드 전달 비활성화
 symbolic-links = OFF # 심볼릭 링크 비활성화
 
-###### Connection 설정
+##### Connection 설정
 
 thread_handling = one-thread-per-connection # 쓰레드풀(Thread Pool) 사용 여부
 쓰레드풀을 사용하려면 pool-of-threads 으로 설정
@@ -130,7 +130,7 @@ open_files_limit = 3000 # mysql이 오픈할수 있는 file(정확히는 file de
 table_open_cache = 4000 # DB전체에서 오픈할 수 있는 테이블 갯수
 table-definition-cache = 4000 # 캐싱해 놓을 (.frm 파일에서 추출한)테이블 정의 갯수, 테이블이 많으면 크게 설정
 
-###### Thread Pool 설정 - thread_handling = pool-of-threads 일 때만 의미 있음
+##### Thread Pool 설정 - thread_handling = pool-of-threads 일 때만 의미 있음
 
 thread_pool_size = 4 # 쓰레드 그룹 갯수, 기본은 CPU 갯수와 같음
 (sleep이나 wait 상태인 쓰레드 제외하고) CPU를 동시에 사용할 수 있는 쓰레드 갯수
@@ -143,7 +143,7 @@ thread_pool_stall_limit = 500 # 쓰레드 교착 상태 검사 간격(밀리초)
 thread_pool_oversubscribe = 3 # internal 파라미터로 임의로 수정하지 않는 것이 좋음
 thread_pool_size * thread_pool_oversubscribe = DB에서 동시에 active되어 CPU를 사용할 수 있는 쓰레드 갯수
 
-###### Connection 메모리 설정
+##### Connection 메모리 설정
 
 sort_buffer_size = 256K # (인덱스를 사용할 수 없는) 정렬에 필요한 버퍼의 크기, ORDER BY 또는 GROUP BY 연산 속도와 관련
 join_buffer_size = 256K # 조인이 테이블을 풀스캔 하기 위해 사용하는 버퍼크기, 드리븐 테이블이 FULL SCAN할 때 사용됨
@@ -159,7 +159,7 @@ group_concat_max_len = 32M # GROUP_CONCAT() 함수를 사용할 때 이용할 �
 max_heap_table_size = 32M # MEMORY 테이블의 최대 크기
 tmp_table_size = 1M # 메모리에 생성될 임시 테이블의 최대 크기, 이 값을 초과하면 디스크에 임시 테이블을 씀
 
-###### 쿼리 캐시 설정
+##### 쿼리 캐시 설정
 
 query_cache_size = 32M # 쿼리 결과를 캐싱하기 위해 할당하는 메모리 크기 (DB전체)
 query_cache_limit = 2M # 쿼리 결과가 이 값보다 크면 캐싱 안 함 (기본은 1M)
@@ -171,7 +171,7 @@ query_cache_type = DEMAND # 쿼리에서 힌트로 쿼리 캐시를 사용하겠
 MariaDB 에서 사용할 수 있는 최대 메모리 사이즈
 innodb_buffer_pool_size + innodb_additional_mem_pool_size + innodb_log_buffer_size + key_buffer_size + query_cache_size + max_connections * ( read_buffer_size + read_rnd_buffer_size + sort_buffer_size + join_buffer_size + thread_stack + binlog_cache_size)
 
-###### InnoDB 설정
+##### InnoDB 설정
 
 innodb_page_size = 16K
 innodb_use_sys_malloc = ON # OS에서 제공되는 메모리 할당기능 사용 여부, ON: InnoDB에서 OS 자원을 사용
@@ -393,7 +393,7 @@ innodb_force_recovery = 0
 5. (SRV_FORCE_NO_UNDO_LOG_SCAN) 데이터베이스를 시작할 때 UNDO log를 검사하지 않음
 6. (SRV_FORCE_NO_LOG_REDO) 복구 연결에서 로그 롤-포워드 (roll-forward)를 실행하지 않음
 
-###### MyISAM 스토리지 엔진 관련 설정
+##### MyISAM 스토리지 엔진 관련 설정
 InnoDB를 사용하지 않고 MyISAM만 사용한다면 key_buffer_size를 크게 설정
 
 key_buffer_size = 16M # MyISAM 테이블이 거의 없고, 데이터도 매우 적으므로 아주 작게 설정
@@ -405,7 +405,7 @@ myisam_repair_threads = 1 # 정렬 복구시 사용될 쓰레드 갯수
 ft_min_word_len # MyISAM 혹은 InnoDB 테이블 FULLTEXT 인덱스를 만들 때 포함될 단어의 최소 길이 (mgroonga와는 관련 없는 설정)
 - 이 값을 변경하면 "REPAIR TABLE 테이블이름 QUICK" 으로 재 구축해야함
 
-###### Aria 스토리지 엔진 관련 설정
+##### Aria 스토리지 엔진 관련 설정
 internal temporary table이 생성될 때는 기본적으로 Aria 스토리지 엔진을 사용하므로 지나치게 작게 설정하지 말 것
 - 예: aria_pagecache_buffer_size = 1M
 
@@ -413,7 +413,7 @@ aria_pagecache_buffer_size = 32M
 aria_sort_buffer_size = 32K
 aria_log_file_size = 64M
 
-###### 통계 및 Optimizing 관련 설정
+##### 통계 및 Optimizing 관련 설정
 
 use_stat_tables = NEVER # 스토리지 엔진 통계 정보와 통합 통계 정보를 이용하는 우선순위를 결정
 - NEVER: 스토리지 엔진 통계정보만 수집
@@ -439,7 +439,7 @@ optimizer_use_condition_selectivity = 4 # 옵티마이저 선택도(1~5)
 
 userstat = ON # Enable INFORMATION_SCHEMA.%_STATISTICS tables
 
-###### Binary Logs
+##### Binary Logs
 
 server_id = 1
 
@@ -487,17 +487,17 @@ sql_log_bin = 0
 mysqld에 적용되는 시스템변수는 아니고, 쓰레드레벨에서 설정할 수 있는 값임
 해당 쓰레드에서 binary log가 안 남게 하고 싶을 때는 0으로 설정 가능, SUPER 권한 필요함
 
-###### 슬레이브(Slave) 설정 - replication 환경에서 slave일 때만 의미 있음
+##### 슬레이브(Slave) 설정 - replication 환경에서 slave일 때만 의미 있음
 
 relay_log = /logs001/mysvc01/MARIASVC/relay # 릴레이 로그 경로
 relay_log_purge = TRUE
 read_only # 일기 전용 DB로 설정
 
-###### 슬레이브(Slave)이면서 마스터(Master)인 경우
+##### 슬레이브(Slave)이면서 마스터(Master)인 경우
 
 log-slave-updates # 현재 복제되는 쿼리를 바이너리 로그에 저장
 
-###### mysqld_safe 데몬에만 적용되는 설정
+##### mysqld_safe 데몬에만 적용되는 설정
 
 [mysqld_safe]
 log-error=/logs001/mysvc01/MARIASVC/error/mysqld.err # 에러로그 파일경로
@@ -505,21 +505,21 @@ pid-file = /engn001/mysvc01/MARIASVC/mysqld.pid # 프로세스 ID 파일경로
 socket = /engn001/mysvc01/MARIASVC/mysqld.sock # 소켓파일 경로
 nice = 0
 
-###### mysqldump 툴을 이용한 DB 접속시에만 적용되는 설정
+##### mysqldump 툴을 이용한 DB 접속시에만 적용되는 설정
 
 [mysqldump]
 max_allowed_packet = 1G
 default-character-set = 'utf8mb4'
 quick # 버퍼를 사용하지 말고, direct로 덤프받기
 
-###### mysqldump 툴을 이용한 DB 접속시에만 적용되는 설정
+##### mysqldump 툴을 이용한 DB 접속시에만 적용되는 설정
 
 [mysqldump]
 max_allowed_packet = 1G
 default-character-set = 'utf8mb4'
 quick # 버퍼를 사용하지 말고, direct로 덤프받기
 
-###### mysql 클라이언트 툴을 이용한 DB 접속시에만 적용되는 설정
+##### mysql 클라이언트 툴을 이용한 DB 접속시에만 적용되는 설정
 
 [mysql]
 default-character-set = 'utf8mb4'
@@ -532,7 +532,7 @@ show-warnings # 경고 발생시 메세지 자동 출력
 #safe-updates # 데이터 변경 또는 삭제시 where절을 필수로 갖도록 처리
 #i-am-a-dummy
 
-###### xtrabackup (innobackupex) 툴을 이용한 DB 접속시에만 적용되는 설정
+##### xtrabackup (innobackupex) 툴을 이용한 DB 접속시에만 적용되는 설정
 
 [xtrabackup]
 default-character-set = 'utf8'
@@ -541,7 +541,7 @@ default-character-set = 'utf8'
 - lib 5.5로 xtrabackup을 다시 컴파일하면 문제가 없지만 workaround로 위와 같은 옵션을 설정해도 됨
 - 위 설정은 특별한 의미는 없으며 lib 5.1에는 utf8이 있기 때문에 오류가 발생하진 않음
 
-###### 모든 클라이언트 툴을 이용한 DB 접속시에 적용되는 설정
+##### 모든 클라이언트 툴을 이용한 DB 접속시에 적용되는 설정
 
 [client]
 port = 3306
