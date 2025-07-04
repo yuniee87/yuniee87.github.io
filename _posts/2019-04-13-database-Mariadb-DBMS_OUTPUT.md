@@ -2,6 +2,7 @@
 title:  "Oracle DBMS_OUTPUT on Mariadb"
 excerpt: "Mariadb에서 Oracle DBMS_OUTPUT 기능 사용하기"
 author_profile: true
+classes: wide
 date: 2019-04-13 12:54:00 +0900
 categories: [database]
 tags: [database,mariadb,oracle]
