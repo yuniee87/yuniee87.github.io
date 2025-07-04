@@ -213,7 +213,7 @@ JAVA_OPTS="-Djava.awt.headless=true"
 <span style="font-size:0.7em">-> first admin 계정 설정</span>
 
 <img align="left" src="/assets/images/jenkins_first_plugin_setting.png">
-<p style="font-size:0.7em;"><strong>→ 플러그인 설정</strong></p>
+<p style="font-size:0.7em;"><strong>-> 플러그인 설정</strong></p>
 <ol style="font-size:0.7em;">
   <li>Jenkins 관리 탭 선택</li>
   <li>플러그인 관리 탭 선택</li>
