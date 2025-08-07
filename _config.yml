@@ -17,11 +17,11 @@ minimal_mistakes_skin    : "dark" # "default" # "air", "aqua", "contrast", "dark
 # Site Settings
 locale                   : "en-US"
 rtl                      : # true, false (default) # turns direction of the page into right to left for RTL languages
-title                    : "Ayaan's Daily Life" # "Site Title"
+title                    : "Ian's Daily Life" # "Site Title"
 title_separator          : "-"
 subtitle                 : # site tagline that appears below site title in masthead
-name                     : "Ayaan" # "Your Name"
-description              : "Ayaan's Everything" # "An amazing website."
+name                     : "Ian" # "Your Name"
+description              : "Ian's Everything" # "An amazing website."
 url                      : "https://yuniee87.github.io" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : "yuniee87/yuniee87.github.io" # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
@@ -114,7 +114,7 @@ analytics:
 
 # Site Author
 author:
-  name             : "Ayaan" # "Your Name"
+  name             : "Ian" # "Your Name"
   avatar           : "/assets/images/avatar.png" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio              : "I am Full-stack developer"  # "I am an **amazing** person."
   location         : "Seoul, South Korea"
